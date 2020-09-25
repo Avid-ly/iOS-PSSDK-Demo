@@ -8,5 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
-#define PSSDKVersion    @"1001"
+#define PSSDKVersion    @"1002"
 #define PSSDKBuild      @"1"
