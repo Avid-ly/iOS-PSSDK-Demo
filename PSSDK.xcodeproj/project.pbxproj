@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA4E608D25555F8300973D28 /* PSSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA4E608A25555F8300973D28 /* PSSDK.bundle */; };
+		AA4E608E25555F8300973D28 /* PSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4E608B25555F8300973D28 /* PSSDK.framework */; };
 		AA878DB72505D63100F158EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA878DB62505D63100F158EF /* AppDelegate.m */; };
 		AA878DBA2505D63100F158EF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA878DB92505D63100F158EF /* SceneDelegate.m */; };
 		AA878DBD2505D63100F158EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA878DBC2505D63100F158EF /* ViewController.m */; };
@@ -14,12 +16,11 @@
 		AA878DC22505D63200F158EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA878DC12505D63200F158EF /* Assets.xcassets */; };
 		AA878DC52505D63200F158EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA878DC32505D63200F158EF /* LaunchScreen.storyboard */; };
 		AA878DC82505D63200F158EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA878DC72505D63200F158EF /* main.m */; };
-		AAAB501F250A29E000721E25 /* TraceAnalysisSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAAB501D250A29E000721E25 /* TraceAnalysisSDK.framework */; };
-		AABA2142251DC4BE00FA1B57 /* PSSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AABA2140251DC4BE00FA1B57 /* PSSDK.bundle */; };
-		AABA2143251DC4BE00FA1B57 /* PSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AABA2141251DC4BE00FA1B57 /* PSSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AA4E608A25555F8300973D28 /* PSSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PSSDK.bundle; sourceTree = "<group>"; };
+		AA4E608B25555F8300973D28 /* PSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PSSDK.framework; sourceTree = "<group>"; };
 		AA878DB22505D63100F158EF /* PSSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA878DB52505D63100F158EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AA878DB62505D63100F158EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -32,9 +33,6 @@
 		AA878DC42505D63200F158EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA878DC62505D63200F158EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA878DC72505D63200F158EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AAAB501D250A29E000721E25 /* TraceAnalysisSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TraceAnalysisSDK.framework; sourceTree = "<group>"; };
-		AABA2140251DC4BE00FA1B57 /* PSSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PSSDK.bundle; sourceTree = "<group>"; };
-		AABA2141251DC4BE00FA1B57 /* PSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PSSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,19 +40,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AABA2143251DC4BE00FA1B57 /* PSSDK.framework in Frameworks */,
-				AAAB501F250A29E000721E25 /* TraceAnalysisSDK.framework in Frameworks */,
+				AA4E608E25555F8300973D28 /* PSSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA4E608825555F8300973D28 /* PSSDK_xcode_1003_1 */ = {
+			isa = PBXGroup;
+			children = (
+				AA4E608A25555F8300973D28 /* PSSDK.bundle */,
+				AA4E608B25555F8300973D28 /* PSSDK.framework */,
+			);
+			path = PSSDK_xcode_1003_1;
+			sourceTree = "<group>";
+		};
 		AA878DA92505D63100F158EF = {
 			isa = PBXGroup;
 			children = (
-				AABA213F251DC4BE00FA1B57 /* PSSDK_xcode_1002_1 */,
-				AAAB501B250A29E000721E25 /* TraceAnalysisSDK_4005_1 */,
+				AA4E608825555F8300973D28 /* PSSDK_xcode_1003_1 */,
 				AA878DB42505D63100F158EF /* PSSDK */,
 				AA878DB32505D63100F158EF /* Products */,
 			);
@@ -84,23 +89,6 @@
 				AA878DC72505D63200F158EF /* main.m */,
 			);
 			path = PSSDK;
-			sourceTree = "<group>";
-		};
-		AAAB501B250A29E000721E25 /* TraceAnalysisSDK_4005_1 */ = {
-			isa = PBXGroup;
-			children = (
-				AAAB501D250A29E000721E25 /* TraceAnalysisSDK.framework */,
-			);
-			path = TraceAnalysisSDK_4005_1;
-			sourceTree = "<group>";
-		};
-		AABA213F251DC4BE00FA1B57 /* PSSDK_xcode_1002_1 */ = {
-			isa = PBXGroup;
-			children = (
-				AABA2140251DC4BE00FA1B57 /* PSSDK.bundle */,
-				AABA2141251DC4BE00FA1B57 /* PSSDK.framework */,
-			);
-			path = PSSDK_xcode_1002_1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,8 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA878DC52505D63200F158EF /* LaunchScreen.storyboard in Resources */,
-				AABA2142251DC4BE00FA1B57 /* PSSDK.bundle in Resources */,
 				AA878DC22505D63200F158EF /* Assets.xcassets in Resources */,
+				AA4E608D25555F8300973D28 /* PSSDK.bundle in Resources */,
 				AA878DC02505D63100F158EF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +313,7 @@
 					"$(PROJECT_DIR)/TraceAnalysisSDK_4005_1",
 					"$(PROJECT_DIR)/PSSDK_xcode_1001_1",
 					"$(PROJECT_DIR)/PSSDK_xcode_1002_1",
+					"$(PROJECT_DIR)/PSSDK_xcode_1003_1",
 				);
 				INFOPLIST_FILE = PSSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -352,6 +341,7 @@
 					"$(PROJECT_DIR)/TraceAnalysisSDK_4005_1",
 					"$(PROJECT_DIR)/PSSDK_xcode_1001_1",
 					"$(PROJECT_DIR)/PSSDK_xcode_1002_1",
+					"$(PROJECT_DIR)/PSSDK_xcode_1003_1",
 				);
 				INFOPLIST_FILE = PSSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import <PSSDK/PSSDK.h>
-#import <TraceAnalysisSDK/TraceAnalysis.h>
 
 static NSString *ProductId  = @"600100";
 static NSString *ChannelId  = @"32400";
@@ -33,7 +32,6 @@ static NSString *AccountId  = @"123456";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [TraceAnalysis initWithProductId:ProductId ChannelId:ChannelId AppID:AppID];
     [PSSDK initWithProductId:ProductId accountId:AccountId];
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
