@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA4E608D25555F8300973D28 /* PSSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA4E608A25555F8300973D28 /* PSSDK.bundle */; };
-		AA4E608E25555F8300973D28 /* PSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA4E608B25555F8300973D28 /* PSSDK.framework */; };
+		AA20297A2648DE05000C725A /* version.md in Resources */ = {isa = PBXBuildFile; fileRef = AA2029772648DE05000C725A /* version.md */; };
+		AA20297B2648DE05000C725A /* PSSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA2029782648DE05000C725A /* PSSDK.bundle */; };
+		AA20297C2648DE05000C725A /* PSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2029792648DE05000C725A /* PSSDK.framework */; };
 		AA878DB72505D63100F158EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA878DB62505D63100F158EF /* AppDelegate.m */; };
 		AA878DBA2505D63100F158EF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA878DB92505D63100F158EF /* SceneDelegate.m */; };
 		AA878DBD2505D63100F158EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA878DBC2505D63100F158EF /* ViewController.m */; };
@@ -19,8 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AA4E608A25555F8300973D28 /* PSSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PSSDK.bundle; sourceTree = "<group>"; };
-		AA4E608B25555F8300973D28 /* PSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PSSDK.framework; sourceTree = "<group>"; };
+		AA2029772648DE05000C725A /* version.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = version.md; sourceTree = "<group>"; };
+		AA2029782648DE05000C725A /* PSSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PSSDK.bundle; sourceTree = "<group>"; };
+		AA2029792648DE05000C725A /* PSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PSSDK.framework; sourceTree = "<group>"; };
 		AA878DB22505D63100F158EF /* PSSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA878DB52505D63100F158EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AA878DB62505D63100F158EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,26 +42,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA4E608E25555F8300973D28 /* PSSDK.framework in Frameworks */,
+				AA20297C2648DE05000C725A /* PSSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA4E608825555F8300973D28 /* PSSDK_xcode_1003_1 */ = {
+		AA2029762648DE05000C725A /* PSSDK_xcode_1.1.0.1_1 */ = {
 			isa = PBXGroup;
 			children = (
-				AA4E608A25555F8300973D28 /* PSSDK.bundle */,
-				AA4E608B25555F8300973D28 /* PSSDK.framework */,
+				AA2029772648DE05000C725A /* version.md */,
+				AA2029782648DE05000C725A /* PSSDK.bundle */,
+				AA2029792648DE05000C725A /* PSSDK.framework */,
 			);
-			path = PSSDK_xcode_1003_1;
+			path = PSSDK_xcode_1.1.0.1_1;
 			sourceTree = "<group>";
 		};
 		AA878DA92505D63100F158EF = {
 			isa = PBXGroup;
 			children = (
-				AA4E608825555F8300973D28 /* PSSDK_xcode_1003_1 */,
+				AA2029762648DE05000C725A /* PSSDK_xcode_1.1.0.1_1 */,
 				AA878DB42505D63100F158EF /* PSSDK */,
 				AA878DB32505D63100F158EF /* Products */,
 			);
@@ -148,10 +151,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA20297B2648DE05000C725A /* PSSDK.bundle in Resources */,
 				AA878DC52505D63200F158EF /* LaunchScreen.storyboard in Resources */,
 				AA878DC22505D63200F158EF /* Assets.xcassets in Resources */,
-				AA4E608D25555F8300973D28 /* PSSDK.bundle in Resources */,
 				AA878DC02505D63100F158EF /* Main.storyboard in Resources */,
+				AA20297A2648DE05000C725A /* version.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +318,7 @@
 					"$(PROJECT_DIR)/PSSDK_xcode_1001_1",
 					"$(PROJECT_DIR)/PSSDK_xcode_1002_1",
 					"$(PROJECT_DIR)/PSSDK_xcode_1003_1",
+					"$(PROJECT_DIR)/PSSDK_xcode_1.1.0.1_1",
 				);
 				INFOPLIST_FILE = PSSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -342,6 +347,7 @@
 					"$(PROJECT_DIR)/PSSDK_xcode_1001_1",
 					"$(PROJECT_DIR)/PSSDK_xcode_1002_1",
 					"$(PROJECT_DIR)/PSSDK_xcode_1003_1",
+					"$(PROJECT_DIR)/PSSDK_xcode_1.1.0.1_1",
 				);
 				INFOPLIST_FILE = PSSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
