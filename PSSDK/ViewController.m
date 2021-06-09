@@ -9,21 +9,22 @@
 #import "ViewController.h"
 #import <PSSDK/PSSDK.h>
 
-static NSString *ProductId  = @"600100";
+//static NSString *ProductId  = @"600100";
+//static NSString *ChannelId  = @"32400";
+//static NSString *AppID      = @"id123456789";
+//static NSString *AccountId  = @"123456";
+
+static NSString *ProductId  = @"600108";
 static NSString *ChannelId  = @"32400";
 static NSString *AppID      = @"id123456789";
-static NSString *AccountId  = @"123456";
+static NSString *AccountId  = @"1";
 
 @interface ViewController ()
 {
-    PSPrivacyModel *_authorizationModel;
-    PSPrivacyModel *_alertModel;
-    
-    UIButton *_getAuthorizationBtn;
-    UIButton *_updateAuthorizationBtn;
-    
-    UIButton *_getAlertInfoBtn;
-    UIButton *_showAlertBtn;
+    NSString *_playerId;
+    UIButton *_playerIdButton;
+    UIButton *_bestBtn;
+    BOOL _canShow;
 }
 @end
 
@@ -32,70 +33,50 @@ static NSString *AccountId  = @"123456";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [PSSDK initWithProductId:ProductId accountId:AccountId];
+//    [PSSDK initWithProductId:ProductId accountId:AccountId];
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:scrollView];
     
     CGFloat x = 70;
-    CGFloat y = 50;
+    CGFloat y = 30;
     CGFloat width = 250;
     CGFloat height = 40;
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    button.backgroundColor = [UIColor orangeColor];
-    button.frame = CGRectMake(x, y, width, height);
-    [button setTitle:@"获取用户归属" forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(getUserRegion) forControlEvents:UIControlEventTouchUpInside];
-    [scrollView addSubview:button];
-    [self adjustCenterH:button];
-    y = button.frame.origin.y + button.frame.size.height + 20;
+    _playerId = [self getPlayerId];
     
-    _getAuthorizationBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _getAuthorizationBtn.backgroundColor = [UIColor orangeColor];
-    _getAuthorizationBtn.frame = CGRectMake(x, y, width, height);
-    [_getAuthorizationBtn setTitle:@"获取用户政策信息和授权状态" forState:UIControlStateNormal];
-    [_getAuthorizationBtn addTarget:self action:@selector(getAuthorization) forControlEvents:UIControlEventTouchUpInside];
-    [scrollView addSubview:_getAuthorizationBtn];
-    [self adjustCenterH:_getAuthorizationBtn];
-    y = _getAuthorizationBtn.frame.origin.y + _getAuthorizationBtn.frame.size.height + 20;
+    _playerIdButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    _playerIdButton.backgroundColor = [UIColor orangeColor];
+    _playerIdButton.frame = CGRectMake(x, y, width, height);
+    [_playerIdButton setTitle:[NSString stringWithFormat:@"当前用户ID %@ , 点击生成新用户",[_playerId substringWithRange:NSMakeRange(0, 4)]] forState:UIControlStateNormal];
+    [_playerIdButton addTarget:self action:@selector(getNewPlayerId) forControlEvents:UIControlEventTouchUpInside];
+    [scrollView addSubview:_playerIdButton];
+    [self adjustCenterH:_playerIdButton];
+    y = _playerIdButton.frame.origin.y + _playerIdButton.frame.size.height + 20;
     
-    _updateAuthorizationBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _updateAuthorizationBtn.backgroundColor = [UIColor orangeColor];
-    _updateAuthorizationBtn.frame = CGRectMake(x, y, width, height);
-    [_updateAuthorizationBtn setTitle:@"主动更新用户授权状态" forState:UIControlStateNormal];
-    [_updateAuthorizationBtn addTarget:self action:@selector(updateAuthorization) forControlEvents:UIControlEventTouchUpInside];
-    [scrollView addSubview:_updateAuthorizationBtn];
-    [self adjustCenterH:_updateAuthorizationBtn];
-    y = _updateAuthorizationBtn.frame.origin.y + _updateAuthorizationBtn.frame.size.height + 20;
+    UIButton *clearBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    clearBtn.backgroundColor = [UIColor orangeColor];
+    clearBtn.frame = CGRectMake(x, y, width, height);
+    [clearBtn setTitle:@"清除当前用户的本地缓存" forState:UIControlStateNormal];
+    [clearBtn addTarget:self action:@selector(clearPlayerCache) forControlEvents:UIControlEventTouchUpInside];
+    [scrollView addSubview:clearBtn];
+    [self adjustCenterH:clearBtn];
+    y = clearBtn.frame.origin.y + clearBtn.frame.size.height + 20;
     
-    _getAlertInfoBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _getAlertInfoBtn.backgroundColor = [UIColor orangeColor];
-    _getAlertInfoBtn.frame = CGRectMake(x, y, width, height);
-    [_getAlertInfoBtn setTitle:@"获取隐私政策弹窗信息" forState:UIControlStateNormal];
-    [_getAlertInfoBtn addTarget:self action:@selector(getAlertInfo) forControlEvents:UIControlEventTouchUpInside];
-    [scrollView addSubview:_getAlertInfoBtn];
-    [self adjustCenterH:_getAlertInfoBtn];
-    y = _getAlertInfoBtn.frame.origin.y + _getAlertInfoBtn.frame.size.height + 20;
+    UIButton *testBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    testBtn.backgroundColor = [UIColor orangeColor];
+    testBtn.frame = CGRectMake(x, y, width, height);
+    [testBtn setTitle:@"最佳实现测试" forState:UIControlStateNormal];
+    [testBtn addTarget:self action:@selector(asyncBestFunction) forControlEvents:UIControlEventTouchUpInside];
+    [scrollView addSubview:testBtn];
+    [self adjustCenterH:testBtn];
+    y = testBtn.frame.origin.y + testBtn.frame.size.height + 20;
     
-    _showAlertBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    _showAlertBtn.backgroundColor = [UIColor orangeColor];
-    _showAlertBtn.frame = CGRectMake(x, y, width, height);
-    [_showAlertBtn setTitle:@"使用弹窗请求用户授权" forState:UIControlStateNormal];
-    [_showAlertBtn addTarget:self action:@selector(showAlert) forControlEvents:UIControlEventTouchUpInside];
-    [scrollView addSubview:_showAlertBtn];
-    [self adjustCenterH:_showAlertBtn];
-    y = _showAlertBtn.frame.origin.y + _showAlertBtn.frame.size.height + 20;
+    _canShow = YES;
     
     y = y + 50;
     
     scrollView.contentSize = CGSizeMake(self.view.frame.size.width, y);
-    
-    _getAuthorizationBtn.hidden = YES;
-    _updateAuthorizationBtn.hidden = YES;
-    
-    _getAlertInfoBtn.hidden = YES;
-    _showAlertBtn.hidden = YES;
 }
 
 - (void)adjustCenterH:(UIView*)v{
@@ -104,152 +85,135 @@ static NSString *AccountId  = @"123456";
     v.center = center;
 }
 
-#pragma mark - click
+#pragma mark - account id
 
-// ------------ Region ------------
-
-- (void)getUserRegion {
-    [PSSDK getUserRegion:^(PSUserRegionModel *model) {
-        
-        // 回到主线程处理
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *title = @"";
-            NSString *message = @"";
-            if (model) {
-                title = @"Succeed";
-                message = [NSString stringWithFormat:@" 国家 %@\n 州省 %@\n 城市 %@",model.country, model.province, model.city];
-                self->_getAuthorizationBtn.hidden = NO;
-                self->_getAlertInfoBtn.hidden = NO;
-            }
-            else {
-                title = @"Error";
-                message = [NSString stringWithFormat:@"model is nil"];
-            }
-            
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleCancel handler:nil]];
-            [self presentViewController:alertController animated:YES completion:nil];
-        });
-    }];
+- (NSString *)getPlayerId {
+    NSString *playerId = [[NSUserDefaults standardUserDefaults] objectForKey:@"TestPlayerId"];
+    if (playerId == nil || [playerId isEqualToString:@""]) {
+        playerId = [NSUUID UUID].UUIDString;
+        [[NSUserDefaults standardUserDefaults] setObject:playerId forKey:@"TestPlayerId"];
+    }
+    
+    return playerId;
 }
 
-// ------------ Authorization ------------
-
-- (void)getAuthorization {
+- (void)getNewPlayerId {
     
-    [PSSDK getAuthorization:^(PSPrivacyModel *model) {
-        
-        self->_authorizationModel = model;
-        
-        // 回到主线程处理
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *title = @"";
-            NSString *message = @"";
-            if (model) {
-                title = @"Succeed";
-                message = [NSString stringWithFormat:@" 政策类别: %@ \n 授权状态: %@",model.privacyPolicy,model.authorization?@"YES":@"NO"];
-                if (model.privacyPolicy && ![model.privacyPolicy isEqualToString:@""]) {
-                    self->_updateAuthorizationBtn.hidden = NO;
-                }
-            }
-            else {
-                title = @"Error";
-                message = [NSString stringWithFormat:@"model is nil"];
-            }
-            
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleCancel handler:nil]];
-            [self presentViewController:alertController animated:YES completion:nil];
-        });
-    }];
-}
-
-- (void)updateAuthorization {
-    
-    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"" message:@"选择要更新的授权状态" preferredStyle:UIAlertControllerStyleActionSheet];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"YES" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self updateAuthorization:YES privacyPolicy:self->_authorizationModel.privacyPolicy];
-    }]];
-    [alertController addAction:[UIAlertAction actionWithTitle:@"NO" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        [self updateAuthorization:NO privacyPolicy:self->_authorizationModel.privacyPolicy];
-    }]];
+    NSString *message = @"确定生成新用户吗？生成新用户后，当前用户数据会被清除";
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Tip" message:message preferredStyle:UIAlertControllerStyleAlert];
     [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"生成新用户" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        //回到主线程中展示更安全
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *playerId = [NSUUID UUID].UUIDString;
+            [[NSUserDefaults standardUserDefaults] setObject:playerId forKey:@"TestPlayerId"];
+            self->_playerId = playerId;
+            [self->_playerIdButton setTitle:[NSString stringWithFormat:@"当前用户ID：%@ , 点击可刷新",[self->_playerId substringWithRange:NSMakeRange(0, 4)]] forState:UIControlStateNormal];
+        });
+    }]];
+    
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
-- (void)updateAuthorization:(BOOL)b privacyPolicy:(NSString *)privacyPolicy {
+- (void)clearPlayerCache {
     
-    [PSSDK updateAuthorization:b privacyPolicy:privacyPolicy completion:^(BOOL succeed) {
-        // 回到主线程处理
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *title = @"";
-            NSString *message = @"";
-            if (succeed) {
-                title = @"Succeed";
-                message = [NSString stringWithFormat:@" 政策类别: %@ \n 授权状态: %@",self->_authorizationModel.privacyPolicy,b?@"YES":@"NO"];
-            }
-            else {
-                title = @"Error";
-                message = [NSString stringWithFormat:@"model is nil"];
-            }
-            
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleCancel handler:nil]];
-            [self presentViewController:alertController animated:YES completion:nil];
-        });
-    }];
+    NSString *message = @"确定清除当前用户的本地缓存吗？用户的本地缓存数据会被清除，但内存中的缓存还在，需要重启APP生效";
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Tip" message:message preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:nil]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"清除" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        
+        NSString *key = [NSString stringWithFormat:@"%@-%@-%@",ProductId, self->_playerId,@"PSPrivacyAuthorizationModel"];
+        [[NSUserDefaults standardUserDefaults] setObject:@"" forKey:key];
+    }]];
+    
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
-// ------------ Alert ------------
+#pragma mark - click
 
-- (void)getAlertInfo {
-    [PSSDK getPrivacyPolicyAlertInfo:^(PSPrivacyModel *model) {
-        self->_alertModel = model;
+// 异步
+- (void)asyncBestFunction {
+    
+    if (!_canShow) {
+        return;
+    }
+    _canShow = NO;
+    
+    NSString *string;
+    string = @"\n开始获取";
+    NSLog(@"%@", @"开始获取");
+    
+    NSString *yourProductId = ProductId;
+    NSString *yourPlayerId = _playerId; // 如果游戏没有accountId的话，可以使用uuid代替 [NSUUID UUID].UUIDString
+    [PSSDK requestPrivacyAuthorizationWithProductId:yourProductId playerId:yourPlayerId vc:self orientation:PSOrientationTypeAuto succeed:^(PSPrivacyAuthorizationModel *model) {
         
-        // 回到主线程处理
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *title = @"";
-            NSString *message = @"";
-            if (model) {
-                title = @"Succeed";
-                message = [NSString stringWithFormat:@" 政策类别: %@ \n 授权状态: %@",model.privacyPolicy,model.authorization?@"YES":@"NO"];
-                self->_showAlertBtn.hidden = NO;
-            }
-            else {
-                title = @"Error";
-                message = [NSString stringWithFormat:@"model is nil"];
-            }
-            
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleCancel handler:nil]];
-            [self presentViewController:alertController animated:YES completion:nil];
-        });
+        // 3.2、打印本地的授权信息
+        [self printModel:model];
         
+        self->_canShow = YES;
+        
+        NSString *string;
+        string = @"结束";
+        NSLog(@"%@", string);
+        
+    } error:^(NSError *error) {
+        NSString *string;
+        string = [NSString stringWithFormat:@"%@",error];
+        NSLog(@"%@", string);
+        
+        self->_canShow = YES;
+        
+        string = @"结束";
+        NSLog(@"%@", string);
     }];
+    
+    
 }
 
-- (void)showAlert {
-
-    [PSSDK showPrivacyPolicyAlert:self completion:^(PSPrivacyModel *model) {
-        
-        // 回到主线程处理
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *title = @"";
-            NSString *message = @"";
-            if (model) {
-                title = @"Succeed";
-                message = [NSString stringWithFormat:@" 政策类别: %@ \n 授权状态: %@",model.privacyPolicy,model.authorization?@"YES":@"NO"];
-            }
-            else {
-                title = @"Error";
-                message = [NSString stringWithFormat:@"model is nil"];
-            }
-            
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:title message:message preferredStyle:UIAlertControllerStyleAlert];
-            [alertController addAction:[UIAlertAction actionWithTitle:@"ok" style:UIAlertActionStyleCancel handler:nil]];
-            [self presentViewController:alertController animated:YES completion:nil];
-        });
-    }];
+- (void)printModel:(PSPrivacyAuthorizationModel *)model {
+    
+    NSString *string;
+    string = @"----------------------------";
+    NSLog(@"%@", string);
+    
+    string = [NSString stringWithFormat:@"当前用户ID：%@",[_playerId substringWithRange:NSMakeRange(0, 4)]];
+    NSLog(@"%@", string);
+    
+    string = [NSString stringWithFormat:@"隐私政策：%@",model.privacyPolicy];
+    NSLog(@"%@", string);
+    
+    string = [NSString stringWithFormat:@"是否已向用户发起过授权：%@",model.authorizationStatus==PSPrivacyAuthorizationStatusNotDetermined?@"未请求过":@"已请求过"];
+    NSLog(@"%@", string);
+    
+    NSString *str1;
+    if (model.collectionStatus == PSPrivacyCollectionStatusUnknow) {
+        str1 = @"未知";
+    }
+    else if (model.collectionStatus == PSPrivacyCollectionStatusDenied) {
+        str1 = @"不同意";
+    }
+    else if (model.collectionStatus == PSPrivacyCollectionStatusAuthorized) {
+        str1 = @"同意";
+    }
+    string = [NSString stringWithFormat:@"是否同意收集隐私信息：%@",str1];
+    NSLog(@"%@", string);
+    
+    NSString *str2;
+    if (model.sharingStatus == PSPrivacySharingStatusUnknow) {
+        str2 = @"未知";
+    }
+    else if (model.sharingStatus == PSPrivacySharingStatusDenied) {
+        str2 = @"不同意";
+    }
+    else if (model.sharingStatus == PSPrivacySharingStatusAuthorized) {
+        str2 = @"同意";
+    }
+    string = [NSString stringWithFormat:@"是否同意分享隐私信息：%@",str2];
+    NSLog(@"%@", string);
+    
+    string = @"----------------------------";
+    NSLog(@"%@", string);
 }
 
 @end

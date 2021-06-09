@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define PSSDKVERSION            @"1.1.0.1"
-#define PSSDKVersion            @"1101"
+#define PSSDKVERSION            @"2.0.0.1"
+#define PSSDKVersion            @"2001"
 #define PSSDKBuild              @"1"
-#define PSSDKVersionString      @"PSSDK_VERSION_1101.1"
+#define PSSDKVersionString      @"PSSDK_VERSION_2001.1"

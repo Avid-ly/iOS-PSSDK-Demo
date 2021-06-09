@@ -7,27 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AA20297A2648DE05000C725A /* version.md in Resources */ = {isa = PBXBuildFile; fileRef = AA2029772648DE05000C725A /* version.md */; };
-		AA20297B2648DE05000C725A /* PSSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AA2029782648DE05000C725A /* PSSDK.bundle */; };
-		AA20297C2648DE05000C725A /* PSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2029792648DE05000C725A /* PSSDK.framework */; };
 		AA878DB72505D63100F158EF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA878DB62505D63100F158EF /* AppDelegate.m */; };
-		AA878DBA2505D63100F158EF /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA878DB92505D63100F158EF /* SceneDelegate.m */; };
 		AA878DBD2505D63100F158EF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA878DBC2505D63100F158EF /* ViewController.m */; };
 		AA878DC02505D63100F158EF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA878DBE2505D63100F158EF /* Main.storyboard */; };
 		AA878DC22505D63200F158EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA878DC12505D63200F158EF /* Assets.xcassets */; };
 		AA878DC52505D63200F158EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA878DC32505D63200F158EF /* LaunchScreen.storyboard */; };
 		AA878DC82505D63200F158EF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA878DC72505D63200F158EF /* main.m */; };
+		AAB7423B2670BAF700927E05 /* version.md in Resources */ = {isa = PBXBuildFile; fileRef = AAB742382670BAF700927E05 /* version.md */; };
+		AAB7423C2670BAF700927E05 /* PSSDK.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AAB742392670BAF700927E05 /* PSSDK.bundle */; };
+		AAB7423D2670BAF700927E05 /* PSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB7423A2670BAF700927E05 /* PSSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AA2029772648DE05000C725A /* version.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = version.md; sourceTree = "<group>"; };
-		AA2029782648DE05000C725A /* PSSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PSSDK.bundle; sourceTree = "<group>"; };
-		AA2029792648DE05000C725A /* PSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PSSDK.framework; sourceTree = "<group>"; };
 		AA878DB22505D63100F158EF /* PSSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA878DB52505D63100F158EF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AA878DB62505D63100F158EF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AA878DB82505D63100F158EF /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		AA878DB92505D63100F158EF /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		AA878DBB2505D63100F158EF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		AA878DBC2505D63100F158EF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AA878DBF2505D63100F158EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,6 +29,9 @@
 		AA878DC42505D63200F158EF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AA878DC62505D63200F158EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AA878DC72505D63200F158EF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AAB742382670BAF700927E05 /* version.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = version.md; sourceTree = "<group>"; };
+		AAB742392670BAF700927E05 /* PSSDK.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PSSDK.bundle; sourceTree = "<group>"; };
+		AAB7423A2670BAF700927E05 /* PSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PSSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,27 +39,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA20297C2648DE05000C725A /* PSSDK.framework in Frameworks */,
+				AAB7423D2670BAF700927E05 /* PSSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		AA2029762648DE05000C725A /* PSSDK_xcode_1.1.0.1_1 */ = {
-			isa = PBXGroup;
-			children = (
-				AA2029772648DE05000C725A /* version.md */,
-				AA2029782648DE05000C725A /* PSSDK.bundle */,
-				AA2029792648DE05000C725A /* PSSDK.framework */,
-			);
-			path = PSSDK_xcode_1.1.0.1_1;
-			sourceTree = "<group>";
-		};
 		AA878DA92505D63100F158EF = {
 			isa = PBXGroup;
 			children = (
-				AA2029762648DE05000C725A /* PSSDK_xcode_1.1.0.1_1 */,
+				AAB742372670BAF700927E05 /* PSSDK_Xcode_2.0.0.1_1 */,
 				AA878DB42505D63100F158EF /* PSSDK */,
 				AA878DB32505D63100F158EF /* Products */,
 			);
@@ -81,8 +68,6 @@
 			children = (
 				AA878DB52505D63100F158EF /* AppDelegate.h */,
 				AA878DB62505D63100F158EF /* AppDelegate.m */,
-				AA878DB82505D63100F158EF /* SceneDelegate.h */,
-				AA878DB92505D63100F158EF /* SceneDelegate.m */,
 				AA878DBB2505D63100F158EF /* ViewController.h */,
 				AA878DBC2505D63100F158EF /* ViewController.m */,
 				AA878DBE2505D63100F158EF /* Main.storyboard */,
@@ -92,6 +77,16 @@
 				AA878DC72505D63200F158EF /* main.m */,
 			);
 			path = PSSDK;
+			sourceTree = "<group>";
+		};
+		AAB742372670BAF700927E05 /* PSSDK_Xcode_2.0.0.1_1 */ = {
+			isa = PBXGroup;
+			children = (
+				AAB742382670BAF700927E05 /* version.md */,
+				AAB742392670BAF700927E05 /* PSSDK.bundle */,
+				AAB7423A2670BAF700927E05 /* PSSDK.framework */,
+			);
+			path = PSSDK_Xcode_2.0.0.1_1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,7 +115,7 @@
 		AA878DAA2505D63100F158EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1110;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = guojunliu.github.io;
 				TargetAttributes = {
 					AA878DB12505D63100F158EF = {
@@ -151,11 +146,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA20297B2648DE05000C725A /* PSSDK.bundle in Resources */,
+				AAB7423C2670BAF700927E05 /* PSSDK.bundle in Resources */,
 				AA878DC52505D63200F158EF /* LaunchScreen.storyboard in Resources */,
 				AA878DC22505D63200F158EF /* Assets.xcassets in Resources */,
 				AA878DC02505D63100F158EF /* Main.storyboard in Resources */,
-				AA20297A2648DE05000C725A /* version.md in Resources */,
+				AAB7423B2670BAF700927E05 /* version.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,7 +164,6 @@
 				AA878DBD2505D63100F158EF /* ViewController.m in Sources */,
 				AA878DB72505D63100F158EF /* AppDelegate.m in Sources */,
 				AA878DC82505D63200F158EF /* main.m in Sources */,
-				AA878DBA2505D63100F158EF /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +215,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -245,7 +240,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -279,6 +274,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -297,7 +293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -309,19 +305,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8Q98XXS96P;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/TraceAnalysisSDK_4005_1",
-					"$(PROJECT_DIR)/PSSDK_xcode_1001_1",
-					"$(PROJECT_DIR)/PSSDK_xcode_1002_1",
-					"$(PROJECT_DIR)/PSSDK_xcode_1003_1",
-					"$(PROJECT_DIR)/PSSDK_xcode_1.1.0.1_1",
+					"$(PROJECT_DIR)/PSSDK_Xcode_2.0.0.1_1",
 				);
 				INFOPLIST_FILE = PSSDK/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,19 +331,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8Q98XXS96P;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/TraceAnalysisSDK_4005_1",
-					"$(PROJECT_DIR)/PSSDK_xcode_1001_1",
-					"$(PROJECT_DIR)/PSSDK_xcode_1002_1",
-					"$(PROJECT_DIR)/PSSDK_xcode_1003_1",
-					"$(PROJECT_DIR)/PSSDK_xcode_1.1.0.1_1",
+					"$(PROJECT_DIR)/PSSDK_Xcode_2.0.0.1_1",
 				);
 				INFOPLIST_FILE = PSSDK/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
