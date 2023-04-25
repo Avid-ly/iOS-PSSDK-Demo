@@ -1,0 +1,16 @@
+PODS:
+  - PSSDK (2.0.0.2)
+
+DEPENDENCIES:
+  - PSSDK (= 2.0.0.2)
+
+SPEC REPOS:
+  https://github.com/Avid-ly/iOS-CocoaPods-Spec.git:
+    - PSSDK
+
+SPEC CHECKSUMS:
+  PSSDK: de420cd568bff478d41f35513b9392fa11b1ca51
+
+PODFILE CHECKSUM: 9dbb57077db6aab24e09d34027d5e0a49a614fc8
+
+COCOAPODS: 1.11.2
