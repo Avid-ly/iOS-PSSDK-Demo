@@ -1,5 +1,5 @@
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/PSSDK/Framework/PSSDK"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/PSSDK/Framework/PSSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/PSSDK"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"resolv" -l"sqlite3" -l"xml2" -l"z" -framework "AVFoundation" -framework "AdSupport" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreMedia" -framework "CoreTelephony" -framework "EventKit" -framework "JavaScriptCore" -framework "MediaPlayer" -framework "MessageUI" -framework "PSSDK" -framework "QuartzCore" -framework "Social" -framework "StoreKit" -framework "SystemConfiguration" -framework "WatchConnectivity" -framework "WebKit"
 PODS_BUILD_DIR = ${BUILD_DIR}

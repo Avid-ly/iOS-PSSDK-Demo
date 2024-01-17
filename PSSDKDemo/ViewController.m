@@ -36,7 +36,7 @@ static NSString *AccountId  = @"1";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    [PSSDK initWithProductId:ProductId accountId:AccountId];
+    [PSSDK initWithProductId:ProductId accountId:AccountId];
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:scrollView];

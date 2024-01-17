@@ -6,6 +6,6 @@ platform :ios, '11.0'
 target 'PSSDKDemo' do
 
 # PSSDK
-pod 'PSSDK', '2.0.0.2'
+pod 'PSSDK', '2.0.0.3'
 
 end

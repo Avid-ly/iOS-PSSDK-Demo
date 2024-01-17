@@ -3,14 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
 		8E54E15121560545090102A42A3C0729 /* PSSDK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = E66885A6344803B839023DD2F9A8C1A3 /* Build configuration list for PBXAggregateTarget "PSSDK" */;
+			buildConfigurationList = 4C3FFE08CF54814A1506058A19757D46 /* Build configuration list for PBXAggregateTarget "PSSDK" */;
 			buildPhases = (
+				5EBB1D0EFA807007B9F3781F074BDD62 /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
 			);
@@ -34,16 +35,17 @@
 
 /* Begin PBXFileReference section */
 		02118FE442DB04EBBAB3A2962DCDC30D /* Pods-PSSDKDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PSSDKDemo-resources.sh"; sourceTree = "<group>"; };
-		262E4B17793DFE31B07ECF41B395510F /* PSSDK.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = PSSDK.bundle; path = Framework/PSSDK/PSSDK.bundle; sourceTree = "<group>"; };
+		063B43204D013515516DC7346DD39A76 /* PSSDK.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = PSSDK.bundle; path = Framework/PSSDK/PSSDK.bundle; sourceTree = "<group>"; };
+		12E06D73AC1F74DF8DF532F9375A5919 /* PSSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = PSSDK.xcframework; path = Framework/PSSDK/PSSDK.xcframework; sourceTree = "<group>"; };
 		4EBA65F367C9C3506018C4C47B20B7DD /* Pods-PSSDKDemo */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-PSSDKDemo"; path = "libPods-PSSDKDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8393E3ED2B702154718F58DDECD7A631 /* Pods-PSSDKDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PSSDKDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		8FF209202246395FFD4EC128E8B13585 /* Pods-PSSDKDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PSSDKDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		99700FCC2572093F84F8B8726C21D650 /* PSSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PSSDK.release.xcconfig; sourceTree = "<group>"; };
+		992382262FF7675862D5061D7F1F4010 /* PSSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PSSDK.debug.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A4900FB79A8E43776A396AA778F20D09 /* Pods-PSSDKDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PSSDKDemo-dummy.m"; sourceTree = "<group>"; };
+		ACAC3E971A1AF577993200424A55CA0B /* PSSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PSSDK.release.xcconfig; sourceTree = "<group>"; };
+		ADB96B4F02BFE80DD9827280F5FD9698 /* PSSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "PSSDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		C13D0C9FA96EC811A076847FA3243C12 /* Pods-PSSDKDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PSSDKDemo.release.xcconfig"; sourceTree = "<group>"; };
-		E1FBD59A50A4B9CCDF22BBFA3A35A3A1 /* PSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PSSDK.framework; path = Framework/PSSDK/PSSDK.framework; sourceTree = "<group>"; };
-		E688F28751CE67C6FF76BB29DD08C963 /* PSSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PSSDK.debug.xcconfig; sourceTree = "<group>"; };
 		F1C15AB048CE6663DAAF0C7690D2266A /* Pods-PSSDKDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PSSDKDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,22 +68,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		465E6015F675DC2C0AE84263AA540A9A /* Support Files */ = {
+		183153F98A037B6B4B4515807498B9F9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E688F28751CE67C6FF76BB29DD08C963 /* PSSDK.debug.xcconfig */,
-				99700FCC2572093F84F8B8726C21D650 /* PSSDK.release.xcconfig */,
+				063B43204D013515516DC7346DD39A76 /* PSSDK.bundle */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/PSSDK";
+			name = Resources;
 			sourceTree = "<group>";
 		};
-		4C0D0FC6ACDCC2F302B343A18D0E4CCF /* PSSDK */ = {
+		5789747A3A1CA38E04D83CE7CBC6C6E4 /* PSSDK */ = {
 			isa = PBXGroup;
 			children = (
-				AF4552D0B62526F5FABA30D30C8DE2F5 /* Frameworks */,
-				A82E652121DA1FC1A6AFCC18611A8AC0 /* Resources */,
-				465E6015F675DC2C0AE84263AA540A9A /* Support Files */,
+				B0EC3CD4EEA67D81D2AB04B0946D53A1 /* Frameworks */,
+				183153F98A037B6B4B4515807498B9F9 /* Resources */,
+				B515CFB3F788C013952BE29D4B2BF87F /* Support Files */,
 			);
 			name = PSSDK;
 			path = PSSDK;
@@ -104,25 +104,28 @@
 		88EF7AC48CEB8DC359821C32B41DEAF4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4C0D0FC6ACDCC2F302B343A18D0E4CCF /* PSSDK */,
+				5789747A3A1CA38E04D83CE7CBC6C6E4 /* PSSDK */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		A82E652121DA1FC1A6AFCC18611A8AC0 /* Resources */ = {
+		B0EC3CD4EEA67D81D2AB04B0946D53A1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				262E4B17793DFE31B07ECF41B395510F /* PSSDK.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		AF4552D0B62526F5FABA30D30C8DE2F5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E1FBD59A50A4B9CCDF22BBFA3A35A3A1 /* PSSDK.framework */,
+				12E06D73AC1F74DF8DF532F9375A5919 /* PSSDK.xcframework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B515CFB3F788C013952BE29D4B2BF87F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ADB96B4F02BFE80DD9827280F5FD9698 /* PSSDK-xcframeworks.sh */,
+				992382262FF7675862D5061D7F1F4010 /* PSSDK.debug.xcconfig */,
+				ACAC3E971A1AF577993200424A55CA0B /* PSSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PSSDK";
 			sourceTree = "<group>";
 		};
 		BF09A5F9E8A79B924891AFD7FBD01C34 /* Targets Support Files */ = {
@@ -192,7 +195,7 @@
 				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -209,6 +212,26 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5EBB1D0EFA807007B9F3781F074BDD62 /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/PSSDK/PSSDK-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/PSSDK/PSSDK-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/PSSDK/PSSDK-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		70AE06024C2FCAD3037DA7B07C7FA888 /* Sources */ = {
@@ -253,9 +276,9 @@
 			};
 			name = Release;
 		};
-		54A8B662B29D68DF3B332B2B6178CB36 /* Debug */ = {
+		1BDB64281DA225443CAD035F04F57438 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E688F28751CE67C6FF76BB29DD08C963 /* PSSDK.debug.xcconfig */;
+			baseConfigurationReference = ACAC3E971A1AF577993200424A55CA0B /* PSSDK.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -267,8 +290,9 @@
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		8248D722FA557A5AD8285403D48558F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -419,9 +443,9 @@
 			};
 			name = Debug;
 		};
-		BF697777F0BC179FA42F3F52D6B4A97A /* Release */ = {
+		BE57DF030F706918F30C3BFD7F4575B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 99700FCC2572093F84F8B8726C21D650 /* PSSDK.release.xcconfig */;
+			baseConfigurationReference = 992382262FF7675862D5061D7F1F4010 /* PSSDK.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -433,9 +457,8 @@
 				);
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -449,20 +472,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4C3FFE08CF54814A1506058A19757D46 /* Build configuration list for PBXAggregateTarget "PSSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE57DF030F706918F30C3BFD7F4575B7 /* Debug */,
+				1BDB64281DA225443CAD035F04F57438 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D9653324609B1AB24EA4140DBB7F22A4 /* Build configuration list for PBXNativeTarget "Pods-PSSDKDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8248D722FA557A5AD8285403D48558F7 /* Debug */,
 				18C44A5A2BB5F9A55DB9D381051D4EC7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E66885A6344803B839023DD2F9A8C1A3 /* Build configuration list for PBXAggregateTarget "PSSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				54A8B662B29D68DF3B332B2B6178CB36 /* Debug */,
-				BF697777F0BC179FA42F3F52D6B4A97A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

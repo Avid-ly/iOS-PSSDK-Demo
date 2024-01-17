@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -58,7 +58,6 @@
 				903C1EC38D2F68A6E564CED8 /* Pods-PSSDKDemo.debug.xcconfig */,
 				7166C11DA9956C39C420B26C /* Pods-PSSDKDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -360,10 +359,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8Q98XXS96P;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(inherited)\"",
-					"\"$(PROJECT_DIR)/PSSDK_Xcode_2.0.0.1_1\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(inherited)\"";
 				INFOPLIST_FILE = PSSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -387,10 +383,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 8Q98XXS96P;
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(inherited)\"",
-					"\"$(PROJECT_DIR)/PSSDK_Xcode_2.0.0.1_1\"",
-				);
+				FRAMEWORK_SEARCH_PATHS = "\"$(inherited)\"";
 				INFOPLIST_FILE = PSSDKDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

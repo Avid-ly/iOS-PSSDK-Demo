@@ -1,0 +1,6 @@
+framework module PSSDK {
+  umbrella header "PSSDK.h"
+
+  export *
+  module * { export * }
+}
