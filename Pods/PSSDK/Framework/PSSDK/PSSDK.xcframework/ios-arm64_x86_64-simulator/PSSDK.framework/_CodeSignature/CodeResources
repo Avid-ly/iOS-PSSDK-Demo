@@ -14,15 +14,19 @@
 		</data>
 		<key>Headers/PSSDKVersion.h</key>
 		<data>
-		ll7gcTDuPfYYuc8qM+q8C2bjGcw=
+		OHyyVqHV2kUKazdEWgPDSEC88Kc=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		LXNcoi0SeLzSc9KAT6PD+U+EIc0=
+		DerOqnRh97H3reuOIjYaJ8QyEEY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		6DXaDLYyUWAoJ7u2BX7uiIHd/R0=
+		rRiZa+ZnLRW7DfCaHcRL45ylnkY=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		5c+BQr8s4ycsNBeEicmAlR9kFT8=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -53,22 +57,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			ll7gcTDuPfYYuc8qM+q8C2bjGcw=
+			OHyyVqHV2kUKazdEWgPDSEC88Kc=
 			</data>
 			<key>hash2</key>
 			<data>
-			B+HdgqXNOWv3Uzwk8OTVR3Fz62yWy03kTpHWCv1G3jw=
+			EOO4jStOhFH4mNw8Q2qq9V5BEicwtJVWgIFBZJY8CQY=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			6DXaDLYyUWAoJ7u2BX7uiIHd/R0=
+			rRiZa+ZnLRW7DfCaHcRL45ylnkY=
 			</data>
 			<key>hash2</key>
 			<data>
-			/0lezMbi2LTBFfKjiVqP6bX8MuiSjZO2EDGTUC/TF8U=
+			jPOyUyiKBKZ2zSlqlVqxl1BK5TGsUq7FZw5xaoX/EpY=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			5c+BQr8s4ycsNBeEicmAlR9kFT8=
+			</data>
+			<key>hash2</key>
+			<data>
+			7SCJbTEY4m62E4HcIJYmgsoV5f9eySnwXWcvnCqahlA=
 			</data>
 		</dict>
 	</dict>

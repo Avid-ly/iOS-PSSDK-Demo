@@ -14,7 +14,7 @@
 //static NSString *AppID      = @"id123456789";
 //static NSString *AccountId  = @"123456";
 
-static NSString *ProductId  = @"600108";
+static NSString *ProductId  = @"600168";
 static NSString *ChannelId  = @"32400";
 static NSString *AppID      = @"id123456789";
 static NSString *AccountId  = @"1";
@@ -35,8 +35,6 @@ static NSString *AccountId  = @"1";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [PSSDK initWithProductId:ProductId accountId:AccountId];
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     [self.view addSubview:scrollView];
